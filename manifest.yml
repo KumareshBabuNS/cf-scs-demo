@@ -1,0 +1,32 @@
+---
+applications:
+- name: backend
+  memory: 1024M
+  path: backend/target/backend-0.0.1-SNAPSHOT.jar
+  buildpack: java_buildpack
+  no-route: true
+  services:
+  - service-registry
+  env:
+    TRUST_CERTS: api.run.pivotal.io
+
+- name: frontend
+  memory: 1024M
+  path: frontend/target/frontend-0.0.1-SNAPSHOT.jar
+  buildpack: java_buildpack
+  no-route: true
+  services:
+  - service-registry
+  - circuit-breaker
+  env:
+    TRUST_CERTS: api.run.pivotal.io
+
+- name: gateway
+  random-route: true
+  memory: 1024M
+  path: gateway/target/gateway-0.0.1-SNAPSHOT.jar
+  buildpack: java_buildpack
+  services:
+  - service-registry
+  env:
+    TRUST_CERTS: api.run.pivotal.io
