@@ -1,7 +1,8 @@
-message: Hi all!
-security:
-  basic:
+--- 
+management: 
+  security: 
     enabled: false
-management:
-  security:
+message: "Hi all!"
+security: 
+  basic: 
     enabled: false

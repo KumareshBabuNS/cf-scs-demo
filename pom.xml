@@ -8,9 +8,9 @@
     <version>1.0.0.BUILD-SNAPSHOT</version>
     <packaging>pom</packaging>
     <modules>
-        <module>backend</module>
-        <module>frontend</module>
-        <module>gateway</module>
-        <module>ui</module>
+        <module>travel-service</module>
+        <module>travel-client</module>
+        <module>travel-gateway</module>
+        <module>travel-ui</module>
     </modules>
 </project>
