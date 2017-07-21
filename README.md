@@ -3,6 +3,17 @@
 ## requirements
 * PWS or PCF
 
+## technologies
+* Spring Boot
+* Spring Cloud Services
+  * Circuit Breaker
+  * Config Server
+  * Service Registry
+* Spring Cloud Bus
+* Spring Cloud Netflix
+  * Zuul
+  * Feign
+
 ## setup
 ```
 cf create-service p-service-registry standard service-registry
