@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: travel-gateway
+  cloud:
+    services:
+      registrationMethod: route

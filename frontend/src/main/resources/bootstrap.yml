@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: travel-client
+  cloud:
+    services:
+      registrationMethod: direct
