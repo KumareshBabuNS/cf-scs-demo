@@ -31,7 +31,7 @@ https://travel-gateway.cfapps.io/travel-service/destinations
 To test `spring cloud config`, modify and commit `spring-cloud-config/application.yml` and reload all apps by issuing:
 
 ```
-curl -X POST https://travel_gateway/bus/refresh
+curl -X POST https://travel-gateway.cfapps.io/bus/refresh
 ```
 
 
