@@ -15,7 +15,11 @@ cf allow-access travel-gateway travel-service --protocol tcp --port 8080
 cf allow-access travel-gateway travel-client --protocol tcp --port 8080
 cf allow-access travel-gateway travel-ui --protocol tcp --port 8080
 ```
-
+## deploy
+```
+mvn clean package
+cf push
+```
 ## test
 
 https://travel_gateway/travel-ui/greeting   
