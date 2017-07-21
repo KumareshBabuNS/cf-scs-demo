@@ -1,1 +1,6 @@
-message: Hi there!
+message: Hi y'all'!
+spring:
+	cloud:
+		bus:
+			trace:
+				enabled: true
