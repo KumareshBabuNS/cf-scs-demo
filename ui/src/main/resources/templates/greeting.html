@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Spring Cloud Services Demo</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+</head>
+<body>
+	<div class="container theme-showcase" role="main">
+		<div class="row">
+			<div class="col-md-6">
+				<p th:text="${message}" />
+    		</div>
+    	</div>
+    	<div class="row">
+    		<div id='data' class="col-md-6 table-responsive">
+    		</div>
+    	</div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script th:inline="javascript">
+    /*<![CDATA[*/
+		var url = /*[[${url}]]*/ '/destinations';
+		
+		$.ajax({
+		    url: url,
+		    method: 'GET',
+		}).done(function(result){
+		    var data = result;
+		    var i = 0;
+		    var DestData = "<table class='table' border='1'>";
+		    DestData += "<tr>";
+		      
+		      	DestData += "<th>";
+		        	DestData += 'city';
+		        DestData += "</th>";
+		        
+		      	DestData += "<th>";
+		        	DestData += 'country';
+		        DestData += "</th>";
+		        
+		      DestData += "</tr>";
+		    for(i=0;i<data.length;i++)
+		    {
+		      DestData += "<tr>";
+		      
+		      	DestData += "<td>";
+		        	DestData += data[i].city;
+		        DestData += "</td>";
+		        
+		      	DestData += "<td>";
+		        	DestData += data[i].country;
+		        DestData += "</td>";
+		        
+		      DestData += "</tr>";
+		    }
+		    DestData += "</table>";
+		    
+		    $("#data").html(DestData);
+		}).fail(function(err){
+			$("#data").html("<p>Not able to get Data from " + url + " !</p>");
+		});
+	/*]]>*/
+	</script>
+</body>
+</html>

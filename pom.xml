@@ -10,6 +10,7 @@
     <modules>
         <module>backend</module>
         <module>frontend</module>
-		<module>gateway</module>
+        <module>gateway</module>
+        <module>ui</module>
     </modules>
 </project>

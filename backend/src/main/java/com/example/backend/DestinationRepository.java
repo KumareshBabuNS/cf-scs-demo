@@ -1,8 +1,12 @@
 package com.example.backend;
 
-import org.springframework.data.jpa.repository.JpaRepository;
+import java.util.List;
+
+import org.springframework.data.repository.PagingAndSortingRepository;
+import org.springframework.data.repository.query.Param;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 @RepositoryRestResource
-public interface DestinationRepository extends JpaRepository<Destination, Long> {
+public interface DestinationRepository extends PagingAndSortingRepository<Destination, Long> {
+	List<Destination> findByCity(@Param("city") String city);
 }
