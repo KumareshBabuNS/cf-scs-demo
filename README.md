@@ -2,6 +2,8 @@
 
 ## requirements
 * PWS or PCF
+* Cloud Foundry CLI
+* Network Access CF CLI plugin
 
 ## technologies
 * Spring Boot
