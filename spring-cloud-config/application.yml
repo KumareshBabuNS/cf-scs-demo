@@ -6,3 +6,8 @@ message: "Hi all!"
 security: 
   basic: 
     enabled: false
+spring:
+  cloud:
+    bus:
+      trace:
+        enabled: true
