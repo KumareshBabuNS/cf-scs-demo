@@ -22,9 +22,9 @@ cf push
 ```
 ## test
 
-https://travel_gateway/travel-ui/greeting   
-https://travel_gateway/travel-client/destinations   
-https://travel_gateway/travel-service/destinations   
+https://travel-gateway.cfapps.io/travel-ui/greeting   
+https://travel-gateway.cfapps.io/travel-client/destinations   
+https://travel-gateway.cfapps.io/travel-service/destinations   
 
 ## update config
 
