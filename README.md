@@ -7,6 +7,8 @@ cf create-service p-config-server standard config-server -c '{"git": { "uri": "h
 cf allow-access frontend backend --protocol tcp --port 8080
 cf allow-access gateway backend --protocol tcp --port 8080
 cf allow-access gateway frontend --protocol tcp --port 8080
+cf allow-access gateway ui --protocol tcp --port 8080
 ```
 
 https://random_route/travel-client/destinations
+https://random_route/ui/greeting
